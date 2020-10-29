@@ -1,6 +1,6 @@
 <div class="container  deep-orange accent-1">
     <div class="jumbotron yellow darken-4">
-        <h1 style="text-shadow: 2px 2px gray;" class="jumbotronic">Me want da Burger!</h1>
+        <h1 style="text-shadow: 2px 2px gray; color:white" class="jumbotronic">Me want da Burger!</h1>
         <h6 style=" text-shadow: 1px 1px gray; color:#black">Track your Burger Order and Devour it fresh!!!!</h6>
     </div>
     <div class="row">
@@ -10,11 +10,14 @@
                     <h5>Burgers waiting to be devoured!</h5><br>
                     <ul>
                         {{#each burgers}}
+                        {{#if this.devoured}}
+                        {{else}}
                         <li>
                             <p> {{this.id}} ) {{this.burger_name}}
-                                <button data-id="{{this.id}}" class="delquote">Devour it!</button>
+                                <button data-id="{{this.id}}" class="delBurger">Devour it!</button>
                             </p>
                         </li>
+                        {{/if}}
                         {{/each}}
                     </ul>
                 </div>
@@ -22,13 +25,14 @@
         </div>
         <div class="col-lg-4">
             <div class="row">
-                <img src="https://image.freepik.com/free-vector/cute-panda-eating-burger-cartoon-vector-illustration-animal-food-concept-isolated-vector-flat-cartoon-style_138676-1936.jpg" href="#"
-                    alt="hamburger" width="300" height="300">
+                <img src="https://image.freepik.com/free-vector/cute-panda-eating-burger-cartoon-vector-illustration-animal-food-concept-isolated-vector-flat-cartoon-style_138676-1936.jpg"
+                    href="#" alt="hamburger" width="300" height="300">
             </div>
             <div class="row">
                 <form class="create-form">
                     <div class="form-group">
-                        <textarea style="color:black" placeholder="Enter a burger you want to devour" id="burger" name="burger" rows="8" cols="30"></textarea>
+                        <textarea style="color:black" placeholder="Enter a burger you want to devour" id="burger"
+                            name="burger" rows="8" cols="30"></textarea>
                     </div>
                     <button type="submit"> Submit</button>
                 </form>
@@ -44,11 +48,13 @@
                         <h5>Devoured... Burp!</h5><br>
                         <ul>
                             {{#each burgers}}
+                            {{#if this.devoured}}
                             <li>
                                 <p> {{this.id}} ) {{this.burger_name}}
-                                    <button data-id="{{this.id}}" class="delquote">Devoured</button>
+                                    <button data-id="{{this.id}}" class="delDevoure">Delete</button>
                                 </p>
                             </li>
+                            {{/if}}
                             {{/each}}
                         </ul>
                     </div>

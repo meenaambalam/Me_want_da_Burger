@@ -20,7 +20,7 @@ app.set("view engine", "handlebars");
 
 // Serve index.handlebars to the root route.
 app.get("/", function(req, res) {
-    orm.selectAll("burgers","id", function(result){
+    orm.selectAll("burgers", "id", function(result){
         console.log(result);
         res.render("index", { burgers: result });
     });
