@@ -1,13 +1,12 @@
+/*element with id named "submitBtn" gets aligned in center of that column setting*/
 #submitBtn{
     display: block;
     margin: 0 auto;
 }
 
+/*element with id named "imageElem" gets aligned in center of that column setting*/
 #imageElem{
     display: block;
     margin: 0 auto;
 }
 
-.devourCard{
-    margin-left: 0px;
-}
