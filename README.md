@@ -18,7 +18,7 @@
         
 ## Description
 ```
-Men_want_da_Burger, is a restaurant app that lets users input the names of burgers they'r like to eat/devour.
+Me_want_da_Burger, is a restaurant app that lets users input the names of burgers they'd like to eat/devour.
 ```
         
 <div id="install"/>
